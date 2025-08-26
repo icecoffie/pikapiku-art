@@ -280,20 +280,5 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.querySelectorAll('#navContent .nav-link').forEach(link=>{
-    link.addEventListener('click',()=>{
-      const nav=document.getElementById('navContent');
-      const bsCollapse=bootstrap.Collapse.getInstance(nav);
-      if(bsCollapse) bsCollapse.hide();
-    });
-  });
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const buyModal=document.getElementById('buyModal');
-  buyModal.addEventListener('show.bs.modal',e=>{
-    const t=e.relatedTarget?.getAttribute('data-ticket')||'';
-    buyModal.querySelector('#ticketName').value=t;
-  });
-</script>
 </body>
 </html>
